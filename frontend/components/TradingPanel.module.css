@@ -1,0 +1,142 @@
+.container {
+    height: 100%;
+}
+
+.title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-primary);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.sideSelector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.25rem;
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.sideButton {
+    padding: 0.75rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    background: transparent;
+    color: var(--color-text-secondary);
+}
+
+.sideButton:hover {
+    background: var(--color-bg-primary);
+}
+
+.sideButtonActive {
+    color: white;
+}
+
+.buyButton.sideButtonActive {
+    background: var(--color-accent-green);
+}
+
+.sellButton.sideButtonActive {
+    background: var(--color-accent-red);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.marketButton {
+    background: none;
+    border: none;
+    color: var(--color-accent-blue);
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.marketButton:hover {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+.total span:first-child {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.totalValue {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-accent-gold);
+    font-family: 'Courier New', monospace;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.message {
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    text-align: center;
+    animation: slideIn 0.3s ease-out;
+}
+
+.message.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-accent-green);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.message.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--color-accent-red);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

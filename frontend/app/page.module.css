@@ -1,0 +1,264 @@
+.main {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.headerLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.priceDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.5rem 1rem;
+    background: var(--color-bg-elevated);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+.priceLabel {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.priceValue {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent-blue);
+    font-family: 'Courier New', monospace;
+}
+
+.errorBanner {
+    padding: 1rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--radius-md);
+    color: var(--color-accent-red);
+    text-align: center;
+    font-weight: 500;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.chartCard {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.orderbookCard {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.tradingCard {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.tradesCard {
+    grid-column: 1 / 4;
+    grid-row: 3;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cardHeader h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.chartInfo {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.chartLegend {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tradesTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.tradesList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.tradeItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--color-accent-blue);
+    font-size: 0.875rem;
+    animation: slideIn 0.3s ease-out;
+}
+
+.tradePrice {
+    color: var(--color-accent-blue);
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+}
+
+.tradeQty {
+    color: var(--color-text-secondary);
+    text-align: center;
+}
+
+.tradeTime {
+    color: var(--color-text-muted);
+    text-align: right;
+    font-size: 0.75rem;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+}
+
+.footer a {
+    color: var(--color-accent-blue);
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chartCard {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .orderbookCard {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .tradingCard {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .tradesCard {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chartCard,
+    .orderbookCard,
+    .tradingCard,
+    .tradesCard {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .headerRight {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

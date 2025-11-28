@@ -1,0 +1,128 @@
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-text-primary);
+}
+
+.section {
+    flex: 1;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-family: 'Courier New', monospace;
+    transition: background-color var(--transition-fast);
+    animation: slideIn 0.3s ease-out;
+}
+
+.row:hover {
+    background: var(--color-bg-secondary);
+}
+
+.askRow {
+    border-left: 3px solid var(--color-accent-red);
+}
+
+.bidRow {
+    border-left: 3px solid var(--color-accent-green);
+}
+
+.price {
+    font-weight: 600;
+}
+
+.askRow .price {
+    color: var(--color-accent-red);
+}
+
+.bidRow .price {
+    color: var(--color-accent-green);
+}
+
+.quantity {
+    color: var(--color-text-secondary);
+    text-align: center;
+}
+
+.total {
+    color: var(--color-text-muted);
+    text-align: right;
+}
+
+.asks {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.bids {
+    display: flex;
+    flex-direction: column;
+}
+
+.empty {
+    padding: 2rem;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+}
+
+.spread {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    background: var(--color-bg-elevated);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+.spreadLabel {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.spreadValue {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-accent-gold);
+    font-family: 'Courier New', monospace;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
