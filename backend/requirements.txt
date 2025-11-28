@@ -4,3 +4,5 @@ websockets==12.0
 numpy==1.24.3
 python-dotenv==1.0.0
 pydantic==2.5.0
+setuptools>=65.0.0
+wheel>=0.38.0
