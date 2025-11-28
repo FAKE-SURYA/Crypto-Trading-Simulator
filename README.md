@@ -343,6 +343,6 @@ MIT License - see [LICENSE](LICENSE) file for details
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/FAKE-SURYA)
+- GitHub: [FAKE-SURYA](https://github.com/FAKE-SURYA)
 
 ---
