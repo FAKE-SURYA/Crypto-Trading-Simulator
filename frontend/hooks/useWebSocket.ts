@@ -9,7 +9,9 @@ interface UseWebSocketReturn {
     error: string | null;
 }
 
-const WS_URL = 'ws://localhost:8000/ws/market-data';
+// Get API URL from environment variable or default to localhost
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const WS_URL = API_URL.replace('http', 'ws') + '/ws/market-data';
 const RECONNECT_INTERVAL = 3000;
 const MAX_RECONNECT_ATTEMPTS = 10;
 
@@ -101,7 +103,7 @@ export function useWebSocket(): UseWebSocketReturn {
     // Send order via REST API (not WebSocket)
     const sendOrder = useCallback(async (side: 'buy' | 'sell', price: number, quantity: number) => {
         try {
-            const response = await fetch('http://localhost:8000/api/orders', {
+            const response = await fetch(`${API_URL}/api/orders`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
