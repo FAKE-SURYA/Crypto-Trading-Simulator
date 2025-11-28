@@ -1,6 +1,6 @@
 # High-Performance Crypto Trading Simulator
 
-⚡ **Resume-Ready Full-Stack Trading Platform** combining C++17, Python FastAPI, and React/Next.js to demonstrate system optimization and real-time data streaming at scale.
+⚡ ** Full-Stack Trading Platform** combining C++17, Python FastAPI, and React/Next.js to demonstrate system optimization and real-time data streaming at scale.
 
 [![Build Status](https://github.com/FAKE-SURYA/crypto-trading-simulator/workflows/Build%20and%20Test/badge.svg)](https://github.com/FAKE-SURYA/crypto-trading-simulator/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,7 +9,6 @@
 
 ## 🎯 Project Highlights
 
-**Built for Senior Engineering Interviews** | Demonstrates:
 - ✅ **Systems Programming**: C++17 with modern STL, memory optimization, O(1) algorithms
 - ✅ **Language Interoperability**: pybind11 bindings, FFI concepts
 - ✅ **Async Programming**: FastAPI with WebSockets, asyncio patterns
@@ -59,7 +58,7 @@
 - **Python**: 3.8 or higher
 - **Node.js**: 18 or higher
 
-### Option 1: Docker (Recommended)
+### Option 1: Docker
 
 ```bash
 # Start both backend and frontend
@@ -224,25 +223,6 @@ euler/
 
 ---
 
-## 🎤 Interview Talking Points
-
-### Systems Design
-> "I chose C++ for the calculation engine to achieve microsecond-level performance. The circular buffer implementation provides O(1) time complexity for SMA updates, compared to O(n) for naive implementations."
-
-### Performance Optimization
-> "Through performance benchmarking, I demonstrated a 100x speedup using C++ vs Python for numerical computations. This is critical in high-frequency trading where every microsecond counts."
-
-### Full-Stack Integration
-> "I used pybind11 to create Python bindings, allowing seamless interoperability while maintaining C++ performance benefits. The WebSocket architecture provides sub-50ms latency for real-time market data on localhost."
-
-### Production Thinking
-> "I implemented auto-reconnection with exponential backoff, multi-stage Docker builds for optimized images, and a CI/CD pipeline that builds the C++ module on every commit. The order matching algorithm uses price-time priority, the same mechanism used by major exchanges like NASDAQ."
-
-### Trade-Offs
-> "I evaluated Rust vs C++ and chose C++ for wider industry adoption and easier Python interop with pybind11. For the frontend, I chose Recharts over D3.js for faster development, though D3 would offer more customization."
-
----
-
 ## 🐳 Docker Deployment
 
 ### Development
@@ -363,32 +343,6 @@ MIT License - see [LICENSE](LICENSE) file for details
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+- GitHub: [@yourusername](https://github.com/FAKE-SURYA)
 
 ---
-
-## 🙏 Acknowledgments
-
-- **pybind11**: Seamless C++ to Python bindings
-- **FastAPI**: Modern async web framework
-- **Next.js**: React framework with excellent DX
-- **Recharts**: Easy and beautiful chart library
-
----
-
-## 📈 Resume Bullet Points
-
-Use these on your resume:
-
-- ✅ **Built high-performance trading simulator with C++/Python/React stack processing 100+ real-time updates/second**
-- ✅ **Optimized calculation engine achieving <1ms latency for SMA computations (100x faster than pure Python)**
-- ✅ **Implemented real-time WebSocket streaming with auto-reconnection and sub-50ms latency**
-- ✅ **Designed order matching algorithm with price-time priority using sorted maps for O(log n) operations**
-- ✅ **Containerized application with Docker multi-stage builds reducing image size by 60%**
-- ✅ **Established CI/CD pipeline with GitHub Actions for automated testing and deployment**
-
----
-
-Made with ❤️ for Senior Engineering Interviews
