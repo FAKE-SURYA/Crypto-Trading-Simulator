@@ -2,7 +2,7 @@
 
 ⚡ **Resume-Ready Full-Stack Trading Platform** combining C++17, Python FastAPI, and React/Next.js to demonstrate system optimization and real-time data streaming at scale.
 
-[![Build Status](https://github.com/yourusername/crypto-trading-simulator/workflows/Build%20and%20Test/badge.svg)](https://github.com/yourusername/crypto-trading-simulator/actions)
+[![Build Status](https://github.com/FAKE-SURYA/crypto-trading-simulator/workflows/Build%20and%20Test/badge.svg)](https://github.com/FAKE-SURYA/crypto-trading-simulator/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
