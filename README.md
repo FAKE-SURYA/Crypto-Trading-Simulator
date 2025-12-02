@@ -5,6 +5,10 @@
 [![Build Status](https://github.com/FAKE-SURYA/crypto-trading-simulator/workflows/Build%20and%20Test/badge.svg)](https://github.com/FAKE-SURYA/crypto-trading-simulator/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Live Demo
+Frontend:https://crypto-cjpkx3tnw-fake-suryaa.vercel.app/  
+Backend:https://crypto-trading-simulator-2re0.onrender.com
+
 ---
 
 ## 🎯 Project Highlights
