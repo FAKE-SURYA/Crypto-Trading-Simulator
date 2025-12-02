@@ -8,6 +8,9 @@ import TradingPanel from '@/components/TradingPanel';
 import { PricePoint, OrderBook as OrderBookType } from '@/types/api';
 import styles from './page.module.css';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+
 export default function Home() {
     const { data, isConnected, sendOrder, trades, error } = useWebSocket();
     const [priceHistory, setPriceHistory] = useState<PricePoint[]>([]);
