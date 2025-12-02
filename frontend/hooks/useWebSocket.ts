@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { MarketDataMessage, OrderEvent, TradeEvent } from '@/types/api';
 
-interface UseWebSocketReturn {
+interface UseWebSocketReturn { //
     data: MarketDataMessage | null;
     isConnected: boolean;
     sendOrder: (side: 'buy' | 'sell', price: number, quantity: number) => Promise<void>;
